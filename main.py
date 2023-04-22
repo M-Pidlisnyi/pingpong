@@ -16,9 +16,7 @@ game = True
 finish = False
 
 """
-....
-...
-....
+.jkbdfjlbvolcb kfl
 """
 
 while game:
