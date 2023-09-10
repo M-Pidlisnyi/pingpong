@@ -15,7 +15,7 @@ pygame.display.set_caption("Гра Пінг Понг. Автор: .....")
 #                     (width, height)
 #             )
 
-
+ 
 
 
 class GameSprite(pygame.sprite.Sprite):
