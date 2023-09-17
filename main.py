@@ -10,10 +10,10 @@ clock = pygame.time.Clock()
 
 pygame.display.set_caption("Гра Пінг Понг. Автор: .....")
 
-# background = pygame.transform.scale(
-#                     pygame.image.load("..."), 
-#                     (width, height)
-#             )
+background = pygame.transform.scale(
+                    pygame.image.load("field.png"), 
+                    (width, height)
+            )
 
 background_color = (252, 252, 3)
  
@@ -81,7 +81,8 @@ while not game_over:
 
     if not finish:
 
-        window.fill(background_color)
+        #window.fill(background_color)
+        window.blit(background, (0,0))
 
         score_1_text = font2.render(str(score_1), True, (0,0,0))
         score_2_text = font2.render(str(score_2), True, (0,0,0))
@@ -127,7 +128,7 @@ while not game_over:
         racket_2.reset()
 
         racket_1.update_l()
-        racket_2.update_r
+        racket_2.update_r()
 
     pygame.display.update()
     clock.tick(FPS)
