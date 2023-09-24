@@ -1,7 +1,7 @@
 import pygame
 
-width = 1300
-height = 700
+width = 800
+height = 600
 
 FPS = 60
 
@@ -44,16 +44,16 @@ class Player(GameSprite):
         keys = pygame.key.get_pressed()
 
 
-        if keys[pygame.K_UP]:
+        if keys[pygame.K_UP] and self.rect.y > 5:
             self.rect.y -= self.speed
-        if keys[pygame.K_DOWN]:
+        if keys[pygame.K_DOWN] and self.rect.y < height-200 :
             self.rect.y += self.speed
 
     def update_l(self):
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_w]:
+        if keys[pygame.K_w] and self.rect.y > 5:
             self.rect.y -= self.speed
-        if keys[pygame.K_s]:
+        if keys[pygame.K_s] and self.rect.y <  height-200:
             self.rect.y += self.speed
 
 
